@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_leaft - check if a npde is left
+ * binary_tree_is_left - check if a node is left
  * 
  * @node: pointer the node to check
  * Return: 1 if node is a leaf, otherwise 0
@@ -9,7 +9,11 @@
 
 int binary_tree_is_leaf(const binary_tree_t *node)
 {
-    if (!node->left && !node->right)
-        return (1);
-    return  (0);
+	if (node == NULL)
+		return (0);
+
+	if (!node->left && !node->right)
+		return (1);
+	else
+		return  (0);
 }
